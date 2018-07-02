@@ -4,6 +4,8 @@
   "homepage": "http://meem0.github.io/tc-jenga",
   "private": true,
   "dependencies": {
+    "firebase": "^5.1.0",
+    "immutability-helper": "^2.7.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.4"
@@ -13,8 +15,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-	"predeploy": "npm run build",
-	"deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0"
