@@ -24,7 +24,7 @@ class TowerHeader extends Component {
       <div>
         <span>
           {towerTitle}
-          <button onClick={this.handleTopple}>
+          <button type='button' className='btn btn-danger' onClick={this.handleTopple}>
             Topple!
           </button>
           <p>Last move: {lastMovePlayerName}</p>

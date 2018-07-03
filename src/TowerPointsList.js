@@ -9,7 +9,7 @@ class TowerPointsList extends Component {
         let playerSeason = this.props.playerSeasons.find(playerSeason => playerSeason.playerId === player.id);
         if (playerSeason && playerSeason.seasonId === this.props.season.id) {
           listItems.push(
-            <li key={player.id}>
+            <li className='list-group-item' key={player.id}>
               <PlayerTowerPointsItem playerName={player.name} towerPoints={playerSeason.towerPoints} />
             </li>
           );
@@ -22,7 +22,7 @@ class TowerPointsList extends Component {
     return (
       <div>
         <h3>Tower Points</h3>
-        <ul>{listItems}</ul>
+        <ul className='list-group'>{listItems}</ul>
       </div>
     );
   }

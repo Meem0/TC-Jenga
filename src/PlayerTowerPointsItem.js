@@ -3,11 +3,9 @@ import React, { Component } from 'react';
 class PlayerTowerPointsItem extends Component {
     render() {
         return (
-            <div>
-                <p>
-                    {this.props.playerName + " - " + this.props.towerPoints}
-                </p>
-            </div>
+            <p className='list-group-item-heading'>
+                {this.props.playerName + " - " + this.props.towerPoints}
+            </p>
         );
     }
 }

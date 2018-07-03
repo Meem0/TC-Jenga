@@ -41,20 +41,26 @@ class App extends Component {
     }
 
     return (
-      <div className="App">
-        <TowerPane
-          toppleTower={this.toppleTower}
-          makeMove={this.makeMove}
-          addPlayer={this.addPlayer}
-          currentGame={currentGame}
-          lastMovePlayer={lastMovePlayer}
-          players={this.state.players}
-        />
-        <SeasonPane
-          players={this.state.players}
-          season={currentSeason}
-          playerSeasons={playerSeasons}
-        />
+      <div className='container'>
+        <div className='row'>
+          <div className='col-sm-8'>
+            <TowerPane
+              toppleTower={this.toppleTower}
+              makeMove={this.makeMove}
+              addPlayer={this.addPlayer}
+              currentGame={currentGame}
+              lastMovePlayer={lastMovePlayer}
+              players={this.state.players}
+            />
+          </div>
+          <div className='col-sm-4'>
+            <SeasonPane
+              players={this.state.players}
+              season={currentSeason}
+              playerSeasons={playerSeasons}
+            />
+          </div>
+        </div>
       </div>
     );
   }
