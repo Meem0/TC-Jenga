@@ -7,9 +7,9 @@ class PlayerGrid extends Component {
     if (this.props.players) {
       this.props.players.forEach(player => {
         gridItems.push(
-          <li key={player.id}>
+          <div className='col-sm-4' key={player.id}>
             <PlayerItem player={player} makeMove={this.props.makeMove} />
-          </li>
+          </div>
         );
       });
     }
@@ -17,8 +17,10 @@ class PlayerGrid extends Component {
       return null;
     }
     return (
-      <div>
-        <ul>{gridItems}</ul>
+      <div className='container'>
+        <div className='row'>
+          {gridItems}
+        </div>
       </div>
     );
   }

@@ -20,13 +20,15 @@ class AddPlayerForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type='text' value={this.state.name} onChange={this.handleNameChange} />
-        </label>
-        <input type='submit' value='Add Player' />
-      </form>
+      <div>
+        <form className='form-inline' onSubmit={this.handleSubmit}>
+          <div className='form-group'>
+            <label htmlFor='name'>Name:</label>
+            <input className='form-control' type='text' id='name' value={this.state.name} onChange={this.handleNameChange} />
+          </div>
+          <input className='btn btn-default' type='submit' value='Add Player' />
+        </form>
+      </div>
     );
   }
 }
